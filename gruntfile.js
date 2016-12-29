@@ -23,7 +23,9 @@ module.exports = function(grunt) {
             build: {
                 src : [
                     'src/vector3.js',
-                    'src/**/*.js'
+                    'src/**/*.js',
+                    '!src/footer.js',
+                    'src/footer.js'
                 ],
                 dest: 'build/built.js',
                 options: {
