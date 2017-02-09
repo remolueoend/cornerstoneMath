@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         },
         concat: {
             build: {
-                src : [
+                src: [
                     'src/vector3.js',
                     'src/**/*.js',
                     '!src/footer.js',
@@ -38,29 +38,12 @@ module.exports = function(grunt) {
                 options: {
                     stripBanners: true,
                     banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                        '<%= grunt.template.today("yyyy-mm-dd") %> ' +
-                        '| (c) 2014 Chris Hafey | https://github.com/chafey/cornerstoneMath */\n'
-                },
-                src : ['build/built.js'],
-                dest: 'dist/cornerstoneMath.js'
-            }
-        },
-        uglify: {
-            dist: {
-                files: {
-                    'dist/cornerstoneMath.min.js': ['dist/cornerstoneMath.js']
-                }
-            },
-            options: {
-                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
                     '<%= grunt.template.today("yyyy-mm-dd") %> ' +
                     '| (c) 2014 Chris Hafey | https://github.com/chafey/cornerstoneMath */\n'
+                },
+                src: ['build/built.js'],
+                dest: 'dist/cornerstoneMath.js'
             }
-        },
-        jshint: {
-            files: [
-                'src/**/*.js'
-            ]
         },
         watch: {
             scripts: {
