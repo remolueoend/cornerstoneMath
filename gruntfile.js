@@ -57,9 +57,6 @@ module.exports = function(grunt) {
                     '| (c) 2014 Chris Hafey | https://github.com/chafey/cornerstoneMath */\n'
             }
         },
-        qunit: {
-            all: ['test/*.html']
-        },
         jshint: {
             files: [
                 'src/**/*.js'
