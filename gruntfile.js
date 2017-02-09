@@ -56,7 +56,7 @@ module.exports = function (grunt) {
 
     require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask('buildAll', ['copy', 'concat:build', 'concat:dist', 'uglify', 'jshint']);
+    grunt.registerTask('buildAll', ['copy', 'concat:build', 'concat:dist']);
     grunt.registerTask('default', ['clean', 'buildAll']);
 };
 
